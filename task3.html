@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <title>Document</title>
+    </head>
+    <body>
+        
+
+        <Script>
+        function power(num1, num2) 
+        {
+            let res = 1;
+            for (let i = 0; i < num2; i++) 
+            {
+                res *= num1;
+            }
+            document.write("The power "+num1+" of "+num2+" = "+res)
+        }
+        let numCalculations = parseInt(prompt("Enter the number of numbers you want to get their powers:"));
+        let results = []; 
+
+
+        for (let i = 0; i < numCalculations; i++) 
+        {
+            let base = parseInt(prompt("Enter the base number for calculation "+(i+1)+" : "));
+            let exponent = parseInt(prompt("Enter the exponent for calculation "+(i + 1)+" : "));
+            results.push({ base, exponent });
+        }
+
+        results.forEach(item => 
+        {
+            let result = power(item.base, item.exponent);
+            document.write("The power "+item.exponent +" of number "+item.base+" is "+result+"\n");
+        });
+
+
+        </Script>
+    </body>
+</html>
